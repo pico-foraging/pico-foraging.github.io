@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: system-ui;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 15vw 80vw;
+  grid-template-rows: 100vh;
+}
+
+.sidebar {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: system-ui;
+  color: teal;
+  line-height: 30px;
+}
+
+/* Feature Overlay */
+.overlay-container {
+  background-color: teal;
+  opacity: 70%;
+  width: 180px;
+  color: #fff;
+  text-align: left;
+  border-radius: 15px;
+  border: 2px solid #00796b;
+  box-shadow: 0 15px 20px rgba(0, 0, 0.8, 0.3);
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -55px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 350;
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pico Island Rural Foraging</title>
+    <style>
+      body {
+        font-family: "Gill Sans", sans-serif;
+        background: radial-gradient(
+          rgb(240, 165, 0) 0%,
+          rgb(247, 214, 132) 71%
+        );
+        margin: auto;
+      }
+      h1 {
+        text-align: center;
+        color: #062c30;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: rgba(52, 128, 129, 0.4);
+        font-family: system-ui;
+        font-weight: 400;
+        border: 1px solid #062c30;
+        margin-top: 10px;
+        margin-bottom: 45px;
+      }
+      h2 {
+        font-family: system-ui;
+        font-weight: 500;
+        text-align: left;
+      }
+      img {
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border: 1px solid #062c30;
+      }
+      p {
+        font-size: 16px;
+        font: oblique;
+        line-height: 1.2;
+        text-align: justify;
+      }
+      div {
+        display: block;
+        text-align: center;
+      }
+      button {
+        text-align: center;
+        line-height: 1.5;
+        width: 330px;
+        float: center;
+        background: teal;
+        color: aliceblue;
+        border-radius: 16px;
+        border: 1px solid #05595b;
+        padding: 18px;
+        font-size: 18px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.8, 0.2);
+        margin-top: 50px;
+        margin-bottom: 20px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: aliceblue;
+        color: teal;
+        cursor: pointer;
+        border: 1px solid #35858b;
+        text-shadow: none;
+      }
+      li {
+        line-height: 16pt;
+        text-align: left;
+      }
+      footer {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+      }
+      a {
+        text-decoration: none;
+        color: #fab404;
+        text-shadow: 1px 1px 2px #413f3f;
+      }
+      span {
+        text-decoration: underline;
+        font-weight: 540;
+      }
+      figcaption {
+        font-size: small;
+        color: rgb(85, 80, 80);
+      }
+      .container {
+        margin: 50px auto 20px auto;
+        background-color: #68ccb3;
+        opacity: 90%;
+        max-width: 550px;
+        padding: 40px;
+        border-radius: 16px;
+        border: 1px solid #00796b;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.8, 0.2);
+      }
+      .foragingtips {
+        display: block;
+        text-align: justify;
+      }
+      .maplink {
+        text-decoration: none;
+        text-align: left;
+      }
+      .grid-1 {
+        float: left;
+        margin: 50px 50px;
+      }
+      .grid-2 {
+        float: left;
+      }
+      .sidebar {
+        margin-bottom: 12px;
+        background-color: #68ccb3;
+        opacity: 90%;
+        width: 250px;
+        padding: 40px;
+        border-radius: 16px;
+        border: 1px solid #00796b;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.8, 0.2);
+        text-align: center;
+      }
+      .dropdown {
+        float: right;
+        margin: auto;
+      }
+      .toggle {
+        text-align: center;
+        width: 250px;
+        float: center;
+        background: #68ccb3;
+        color: #fac02e;
+        border-radius: 16px;
+        border: 1px solid #00796b;
+        padding: 14px;
+        font-size: 16px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.8, 0.2);
+        text-shadow: 1px 1px 2px #413f3f;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 50px;
+        transition: all 150ms ease-in-out;
+      }
+      .language {
+        margin-left: 10px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="toggle" type="button" data-toggle="dropdown">
+        Language Options:
+        <span class="language" onclick="toggleLanguage('English')"
+          ><a href="#">🇬🇧</a></span
+        >
+        <span class="language" onclick="toggleLanguage('Portuguese')"
+          ><a href="#">🇵🇹</a></span
+        >
+      </button>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-1">
+        <div class="sidebar">
+          <h2 id="getinvolved">Get Involved:</h2>
+          <br />
+          <div id="checkoutmap" class="maplink">
+            Check out the
+            <a href="http://127.0.0.1:5500/index.html" target="_blank"> map </a>
+            for edible resources in your area!
+            <br />
+            <br />
+            <hr />
+            <br />
+            Help us build the database by adding
+            <a
+              href="https://docs.google.com/spreadsheets/d/1lR_gworz1UvMcGuuDWVULdiSHOKORGtId_0Ek0TUShM/edit#gid=0"
+              target="_blank"
+              >locations</a
+            >
+            of edible resources on <span>public land</span>!
+            <br />
+            <br />
+            <hr />
+            <br />
+            Or – if you have more than you can process – add your own
+            <a
+              href="https://docs.google.com/spreadsheets/d/1lR_gworz1UvMcGuuDWVULdiSHOKORGtId_0Ek0TUShM/edit#gid=0"
+              target="_blank"
+            >
+              <span>private locations</span></a
+            >
+            and specify conditions of use! 😋
+            <br />
+            <br />
+          </div>
+          <div></div>
+        </div>
+        <button class="membership">
+          Become a member of the<br />Pico Island Foraging Community
+        </button>
+      </div>
+
+      <div class="grid-2">
+        <div class="container">
+          <h1>Pico Island Rural Foraging</h1>
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/57f7c21be3df28e37ffbbc26/1592944820607-6TXUGTFR43MBFS75E09K/EB_Summer_Foraging-21_WEB.jpg"
+            alt=""
+            width="100%"
+          />
+          <figcaption>Image source: www.edibleboston.com</figcaption>
+          <br />
+          <p>
+            Foraging is the act of searching for wild resources such as plants,
+            fungi, fruit, roots, barks and nuts to use as food or medicine. It
+            is a great way to spend time outdoors, interact with nature, and
+            even teach your children that food is not grown in the supermarket
+            and that not all medicine comes from a pharmacy.
+            <br />
+            <br />
+            All over the island there is food that is being grown by nature, and
+            a lot of it is not harvested. This site will function as a treasure
+            map for Pico Island in the Azores Archipelago, displaying
+            information about the localization of trees, shrubs and herbaceous
+            plants suitable for foraging.
+          </p>
+          <br />
+          <hr />
+          <div class="foragingtips">
+            <h2>How to forage</h2>
+            <p>Here are some tips for ethical foraging:</p>
+            <ul>
+              <li>
+                Learn to correctly identify the plants, especially mushrooms and
+                berries;
+              </li>
+              <li>
+                Only harvest what you truly need and leave some for others;
+              </li>
+              <li>
+                Always ask permission before foraging on private property;
+              </li>
+              <li>
+                Only forage in areas that are unlikely to have been sprayed.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <footer>
+            Coded by<a
+              href="https://www.researchgate.net/profile/Sol-Heber"
+              target="_blank"
+            >
+              Sol</a
+            >
+            ☀️
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleLanguage(language) {
+        let h2 = document.getElementById("getinvolved");
+        if (language === "Portuguese") {
+          h2.innerHTML = "Participa:";
+        } else {
+          h2.innerHTML = "Get involved:";
+        }
+      }
+    </script>
+
+    <script>
+      function subscribe() {
+        let name = prompt("What is your name?");
+        let email = prompt("Please enter your email address:");
+        alert("Thanks " + name + ", we'll be in touch!");
+      }
+      let button = document.querySelector(".membership");
+      button.addEventListener("click", subscribe);
+    </script>
+  </body>
+</html>
