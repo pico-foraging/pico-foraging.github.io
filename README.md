@@ -7,3 +7,15 @@ Foraging is the act of searching for wild resources such as plants, fungi, fruit
 Here on Pico Island in the Azores archipelago, there is free food being grown by nature all over the island on public land, and a lot of it is not harvested.
 
 This site is supposed to function as a treasure map for Pico, to which anyone can add information about the localization of trees, shrubs and herbaceous plants suitable for foraging.
+
+// TO DO LIST
+
+// Add filters to map
+
+Tags for map filters: - Harvest time (months in which fruits/plants are ready to be harvested) - Type of plant (fruit tree, nut tree, vegetable, culinary/medicinal herb,…) - Land type (public or private) - (Dots on map —> different coloured dots according to plant species)
+
+// Configure information to be displayed when clicking on a map point
+
+Information to list at each map point:
+Level 1: - Plant species
+Level 2: - Plant species - Date of visit - Stage of development at date of visit - Harvest time - Ownership (public or private) - Conditions of use (if private)
